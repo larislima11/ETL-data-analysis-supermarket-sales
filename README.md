@@ -30,5 +30,46 @@ Utilizando técnicas de processamento de dados e visualização, esta análise p
 - Quantidade de Produtos Vendidos por Categoria: Um gráfico de barras comparando as categorias de produtos mais vendidos.
 - Perfil Demográfico dos Clientes: Um gráfico de pizza exibindo a proporção de clientes por faixa etária.
 
-  link colab: https://colab.research.google.com/drive/1smCSRAcn9v-eYIVt4FrClAUng1KE9bB1?usp=sharing
+ # Organização dos Dados
+
+clientes.csv: Contém dados demográficos dos clientes.
+
+id_cliente: Identificador único de cada cliente.
+idade: Idade do cliente.
+gênero: Gênero do cliente (masculino, feminino).
+localizacao: Cidade onde o cliente reside.
+vendas.csv: Contém informações sobre as vendas realizadas.
+
+id_venda: Identificador único da venda.
+id_produto: Produto comprado.
+valor: Valor da venda.
+hora_compra: Hora do dia em que a venda foi realizada.
+id_cliente: Cliente que realizou a compra.
+produtos.csv: Contém informações sobre os produtos vendidos.
+
+id_produto: Identificador único do produto.
+categoria: Categoria do produto (alimentos, bebidas, etc.).
+preco: Preço do produto.
+
+# Visualizações
+
+As visualizações disponíveis no notebook ajudam a entender o comportamento de compra e o perfil dos clientes:
+
+1. Gráfico de Linhas - Volume de Vendas por Hora do Dia:
+Este gráfico mostra como o volume de vendas varia ao longo do dia.
+
+2. Gráfico de Barras - Quantidade de Produtos Vendidos por Categoria:
+Compara a quantidade de produtos vendidos para cada categoria (alimentos, bebidas, eletrônicos, etc.).
+
+3. Gráfico de Pizza - Proporção de Clientes por Faixa Etária:
+Exibe a proporção de clientes em cada faixa etária, mostrando o perfil demográfico dos consumidores.
+
+# Futuras Melhorias
+Integração com Firebase: Adicionar a persistência dos dados usando um banco de dados real, como Firebase.
+Análise Preditiva: Usar machine learning para prever o comportamento futuro dos clientes.
+Análise Geoespacial: Incluir mapas para analisar a localização dos clientes e identificar regiões com maior volume de vendas.
+
+# Contribuições
+Contribuições são bem-vindas! Se você quiser sugerir melhorias, por favor, abra um pull request ou envie uma issue no repositório.
+# link colab: https://colab.research.google.com/drive/1smCSRAcn9v-eYIVt4FrClAUng1KE9bB1?usp=sharing
 
