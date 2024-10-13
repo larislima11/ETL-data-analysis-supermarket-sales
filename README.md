@@ -30,3 +30,5 @@ Utilizando técnicas de processamento de dados e visualização, esta análise p
 - Quantidade de Produtos Vendidos por Categoria: Um gráfico de barras comparando as categorias de produtos mais vendidos.
 - Perfil Demográfico dos Clientes: Um gráfico de pizza exibindo a proporção de clientes por faixa etária.
 
+  link colab: https://colab.research.google.com/drive/1smCSRAcn9v-eYIVt4FrClAUng1KE9bB1?usp=sharing
+
