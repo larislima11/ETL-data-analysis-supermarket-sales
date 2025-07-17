@@ -8,7 +8,7 @@ Este projeto é uma análise aprofundada do comportamento de compra dos clientes
 - Segmentar Clientes: Explorar dados demográficos para identificar o perfil dos nossos consumidores.
 - Gerar Insights Estratégicos: Fornecer ao supermercado informações valiosas para melhorar campanhas de marketing, otimizar estoque e aprimorar a experiência do cliente.
 
-#  Estrutura do Projeto & Tarefas Realizadas
+#  Estrutura do projeto e tarefas realizadas
 
 ### 1. Geração de Dados Simulados
 
