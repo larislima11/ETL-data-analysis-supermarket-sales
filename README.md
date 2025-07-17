@@ -1,75 +1,107 @@
-# Supermarket Customer Analysis
+🛒 Supermarket Customer Behavior Analysis | Análise de Comportamento de Clientes de Supermercado
 
-Este projeto é uma análise do comportamento de compra dos clientes de um grande supermercado. O objetivo é entender padrões de venda por hora, categorias de produtos mais vendidos, e as características demográficas dos clientes.
-Utilizando técnicas de processamento de dados e visualização, esta análise pode ajudar o supermercado a melhorar sua estratégia de marketing e otimizar as operações.
+Este projeto é uma análise aprofundada do comportamento de compra dos clientes de um grande supermercado. Usando um pipeline completo de processamento de dados e visualização, nosso objetivo é transformar dados brutos em insights acionáveis que podem otimizar estratégias de marketing e operações.
 
 # Objetivo
 
-- Analisar o comportamento de compra dos clientes de um supermercado com base em dados de vendas.
-- Entender quais produtos são mais vendidos e identificar padrões de compra ao longo do dia.
-- Explorar dados demográficos dos clientes, como idade, gênero e localização, para insights sobre o perfil de compra.
+- Compreender Padrões de Compra: Analisar como os clientes compram, incluindo a variação das vendas por hora e as categorias de produtos mais populares.
+- Segmentar Clientes: Explorar dados demográficos para identificar o perfil dos nossos consumidores.
+- Gerar Insights Estratégicos: Fornecer ao supermercado informações valiosas para melhorar campanhas de marketing, otimizar estoque e aprimorar a experiência do cliente.
 
-# Tarefas Realizadas
+#  Estrutura do Projeto & Tarefas Realizadas
 
-1. Geração de Dados Simulados:
+### 1. Geração de Dados Simulados
 
-- Criamos três conjuntos de dados simulados, representados em arquivos CSV:
-- Vendas: Detalhes sobre cada venda, como produto comprado, valor da compra, hora e cliente.
-- Clientes: Informações demográficas dos clientes, como idade, gênero e localização.
-- Produtos: Detalhes dos produtos, incluindo categoria e preço.
+Para garantir um ambiente de desenvolvimento controlável e reproduzível, criei três conjuntos de dados sintéticos que mimetizam informações reais de um supermercado:
 
-2. Processamento de Dados (ETL):
+* **`vendas.csv`**: Contém detalhes de cada transação, como `id_venda`, `id_produto`, `valor`, `hora_compra` e `id_cliente`.
+* **`clientes.csv`**: Inclui informações demográficas dos clientes, como `id_cliente`, `idade`, `gênero` e `localizacao`.
+* **`produtos.csv`**: Fornece detalhes dos produtos, incluindo `id_produto`, `categoria` e `preco`.
 
-- Extração: Extraímos os dados simulados de arquivos CSV.
-- Transformação: Realizamos a limpeza dos dados e calculamos métricas importantes, como ticket médio por cliente e quantidade média de itens por compra.
-- Carga: Estruturamos os dados em um formato adequado para análise, criando tabelas de fatos e dimensões.
+### 2. Processamento de Dados (ETL)
 
-3. Análise e Visualização:
+Essa fase crucial prepara os dados brutos para a análise:
 
-- Volume de Vendas por Hora: Um gráfico de linhas mostrando como as vendas variam ao longo do dia.
-- Quantidade de Produtos Vendidos por Categoria: Um gráfico de barras comparando as categorias de produtos mais vendidos.
-- Perfil Demográfico dos Clientes: Um gráfico de pizza exibindo a proporção de clientes por faixa etária.
+* **Extração:** Eu carrego os dados simulados diretamente dos arquivos CSV.
+* **Transformação:** Realizo a limpeza e o enriquecimento dos dados. Isso envolve:
+    * Tratamento de valores ausentes e correção de tipos de dados (especialmente para `hora_compra`).
+    * Cálculo de métricas importantes como **ticket médio por cliente** e **quantidade média de itens por compra**.
+    * Derivação de novas *features* de tempo (ex: `hora`, `dia_da_semana`) a partir da `hora_compra`.
+* **Carga:** Os dados transformados são estruturados em um formato otimizado para análise, simulando um **Data Warehouse** com tabelas de fatos e dimensões.
 
- # Organização dos Dados
+### 3. Análise e Visualização
 
-clientes.csv: Contém dados demográficos dos clientes.
+Com os dados limpos e estruturados, eu mergulho na análise e na criação de visualizações para extrair e comunicar insights:
 
-id_cliente: Identificador único de cada cliente.
-idade: Idade do cliente.
-gênero: Gênero do cliente (masculino, feminino).
-localizacao: Cidade onde o cliente reside.
-vendas.csv: Contém informações sobre as vendas realizadas.
+* **Volume de Vendas por Hora do Dia (Gráfico de Linhas):**
+    * *Insight:* Revela os horários de pico e de menor movimento, auxiliando na alocação de equipe e no timing de promoções.
+* **Quantidade de Produtos Vendidos por Categoria (Gráfico de Barras):**
+    * *Insight:* Destaca as categorias de produtos mais populares, orientando decisões de estoque e sortimento.
+* **Proporção de Clientes por Faixa Etária (Gráfico de Pizza):**
+    * *Insight:* Oferece uma visão demográfica da base de clientes, auxiliando no direcionamento de campanhas de marketing.
 
-id_venda: Identificador único da venda.
-id_produto: Produto comprado.
-valor: Valor da venda.
-hora_compra: Hora do dia em que a venda foi realizada.
-id_cliente: Cliente que realizou a compra.
-produtos.csv: Contém informações sobre os produtos vendidos.
+---
 
-id_produto: Identificador único do produto.
-categoria: Categoria do produto (alimentos, bebidas, etc.).
-preco: Preço do produto.
+## Organização dos Dados
 
-# Visualizações
+Os dados simulados são organizados da seguinte forma:
 
-As visualizações disponíveis no notebook ajudam a entender o comportamento de compra e o perfil dos clientes:
+* **`clientes.csv`**:
+    * `id_cliente`: Identificador único de cada cliente.
+    * `idade`: Idade do cliente.
+    * `gênero`: Gênero do cliente (Masculino, Feminino).
+    * `localizacao`: Cidade de residência.
 
-1. Gráfico de Linhas - Volume de Vendas por Hora do Dia:
-Este gráfico mostra como o volume de vendas varia ao longo do dia.
+* **`vendas.csv`**:
+    * `id_venda`: Identificador único da transação.
+    * `id_produto`: Produto adquirido na venda.
+    * `valor`: Valor total da venda.
+    * `hora_compra`: Timestamp da transação.
+    * `id_cliente`: Cliente que realizou a compra.
 
-2. Gráfico de Barras - Quantidade de Produtos Vendidos por Categoria:
-Compara a quantidade de produtos vendidos para cada categoria (alimentos, bebidas, eletrônicos, etc.).
+* **`produtos.csv`**:
+    * `id_produto`: Identificador único do produto.
+    * `categoria`: Categoria do produto (Alimentos, Bebidas, Eletrônicos, etc.).
+    * `preco`: Preço unitário do produto.
 
-3. Gráfico de Pizza - Proporção de Clientes por Faixa Etária:
-Exibe a proporção de clientes em cada faixa etária, mostrando o perfil demográfico dos consumidores.
+---
 
-# Futuras Melhorias
-Integração com Firebase: Adicionar a persistência dos dados usando um banco de dados real, como Firebase.
-Análise Preditiva: Usar machine learning para prever o comportamento futuro dos clientes.
-Análise Geoespacial: Incluir mapas para analisar a localização dos clientes e identificar regiões com maior volume de vendas.
+## 📈 Visualizações Chave
 
+As visualizações geradas são cruciais para a compreensão dos padrões de compra:
+
+1.  **Gráfico de Linhas - Volume de Vendas por Hora do Dia:**
+    * Este gráfico ilustra a variação do volume de vendas ao longo das 24 horas, identificando os períodos de maior e menor atividade.
+      
+  <img width="629" height="410" alt="image" src="https://github.com/user-attachments/assets/999f130c-fab3-4319-ab50-5fa41312edca" />
+
+2.  **Gráfico de Barras - Quantidade de Produtos Vendidos por Categoria:**
+    * Compara a popularidade das diferentes categorias de produtos (ex: alimentos vs. bebidas vs. eletrônicos), destacando as mais vendidas.
+      
+  <img width="644" height="428" alt="image" src="https://github.com/user-attachments/assets/0736174a-5b54-44ad-9a8e-7f48472e33e3" />
+
+3.  **Gráfico de Pizza - Proporção de Clientes por Faixa Etária:**
+    * Apresenta a distribuição percentual dos clientes em distintas faixas etárias, oferecendo insights sobre o público-alvo principal do supermercado.
+
+<img width="446" height="451" alt="image" src="https://github.com/user-attachments/assets/a76133bb-7214-4b7f-bc8b-63c4667823aa" />
+
+---
+
+## ⏭️ Futuras Melhorias
+
+Este projeto serve como uma base sólida, mas pode ser expandido com as seguintes melhorias:
+
+* **Integração com Firebase:** Adicionar persistência dos dados e tornar o sistema mais escalável usando um banco de dados NoSQL real, como Firebase.
+* **Análise Preditiva:** Implementar modelos de Machine Learning para prever o comportamento futuro dos clientes, como *churn*, valor de tempo de vida (*LTV*) ou recomendação de produtos.
+* **Análise Geoespacial:** Incorporar visualizações de mapa para analisar a distribuição geográfica dos clientes e identificar regiões com maior potencial de vendas.
+
+---
 # Contribuições
 Contribuições são bem-vindas! Se você quiser sugerir melhorias, por favor, abra um pull request ou envie uma issue no repositório.
-# link colab: https://colab.research.google.com/drive/1smCSRAcn9v-eYIVt4FrClAUng1KE9bB1?usp=sharing
+
+## 🔗 Link para o Notebook
+
+* **Google Colab:** [https://colab.research.google.com/drive/1smCSRAcn9v-eYIVt4FrClAUng1KE9bB1?usp=sharing](https://colab.research.google.com/drive/1smCSRAcn9v-eYIVt4FrClAUng1KE9bB1?usp=sharing)
+
+---
 
