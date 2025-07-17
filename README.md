@@ -1,4 +1,4 @@
-🛒 Supermarket Customer Behavior Analysis | Análise de Comportamento de Clientes de Supermercado
+# 🛒 Supermarket Customer Behavior Analysis | Análise de Comportamento de Clientes de Supermercado
 
 Este projeto é uma análise aprofundada do comportamento de compra dos clientes de um grande supermercado. Usando um pipeline completo de processamento de dados e visualização, nosso objetivo é transformar dados brutos em insights acionáveis que podem otimizar estratégias de marketing e operações.
 
