@@ -4,9 +4,9 @@ Este projeto é uma análise aprofundada do comportamento de compra dos clientes
 
 # Objetivo
 
-- Compreender Padrões de Compra: Analisar como os clientes compram, incluindo a variação das vendas por hora e as categorias de produtos mais populares.
-- Segmentar Clientes: Explorar dados demográficos para identificar o perfil dos nossos consumidores.
-- Gerar Insights Estratégicos: Fornecer ao supermercado informações valiosas para melhorar campanhas de marketing, otimizar estoque e aprimorar a experiência do cliente.
+- Compreender Padrões de Compra: analisar como os clientes compram, incluindo a variação das vendas por hora e as categorias de produtos mais populares.
+- Segmentar Clientes: explorar dados demográficos para identificar o perfil dos nossos consumidores.
+- Gerar Insights Estratégicos: fornecer ao supermercado informações valiosas para melhorar campanhas de marketing, otimizar estoque e aprimorar a experiência do cliente.
 
 #  Estrutura do projeto e tarefas realizadas
 
@@ -14,20 +14,20 @@ Este projeto é uma análise aprofundada do comportamento de compra dos clientes
 
 Para garantir um ambiente de desenvolvimento controlável e reproduzível, criei três conjuntos de dados sintéticos que mimetizam informações reais de um supermercado:
 
-* **`vendas.csv`**: Contém detalhes de cada transação, como `id_venda`, `id_produto`, `valor`, `hora_compra` e `id_cliente`.
-* **`clientes.csv`**: Inclui informações demográficas dos clientes, como `id_cliente`, `idade`, `gênero` e `localizacao`.
-* **`produtos.csv`**: Fornece detalhes dos produtos, incluindo `id_produto`, `categoria` e `preco`.
+* **`vendas.csv`**: contém detalhes de cada transação, como `id_venda`, `id_produto`, `valor`, `hora_compra` e `id_cliente`.
+* **`clientes.csv`**: inclui informações demográficas dos clientes, como `id_cliente`, `idade`, `gênero` e `localizacao`.
+* **`produtos.csv`**: fornece detalhes dos produtos, incluindo `id_produto`, `categoria` e `preco`.
 
 ### 2. Processamento de Dados (ETL)
 
 Essa fase crucial prepara os dados brutos para a análise:
 
-* **Extração:** Eu carrego os dados simulados diretamente dos arquivos CSV.
-* **Transformação:** Realizo a limpeza e o enriquecimento dos dados. Isso envolve:
+* **Extração:** eu carrego os dados simulados diretamente dos arquivos CSV.
+* **Transformação:** realizo a limpeza e o enriquecimento dos dados. Isso envolve:
     * Tratamento de valores ausentes e correção de tipos de dados (especialmente para `hora_compra`).
     * Cálculo de métricas importantes como **ticket médio por cliente** e **quantidade média de itens por compra**.
     * Derivação de novas *features* de tempo (ex: `hora`, `dia_da_semana`) a partir da `hora_compra`.
-* **Carga:** Os dados transformados são estruturados em um formato otimizado para análise, simulando um **Data Warehouse** com tabelas de fatos e dimensões.
+* **Carga:** os dados transformados são estruturados em um formato otimizado para análise, simulando um **Data Warehouse** com tabelas de fatos e dimensões.
 
 ### 3. Análise e Visualização
 
@@ -66,7 +66,7 @@ Os dados simulados são organizados da seguinte forma:
 
 ---
 
-## 📈 Visualizações Chave
+## Visualizações Chave
 
 As visualizações geradas são cruciais para a compreensão dos padrões de compra:
 
@@ -87,13 +87,13 @@ As visualizações geradas são cruciais para a compreensão dos padrões de com
 
 ---
 
-## ⏭️ Futuras Melhorias
+## Futuras Melhorias
 
 Este projeto serve como uma base sólida, mas pode ser expandido com as seguintes melhorias:
 
-* **Integração com Firebase:** Adicionar persistência dos dados e tornar o sistema mais escalável usando um banco de dados NoSQL real, como Firebase.
-* **Análise Preditiva:** Implementar modelos de Machine Learning para prever o comportamento futuro dos clientes, como *churn*, valor de tempo de vida (*LTV*) ou recomendação de produtos.
-* **Análise Geoespacial:** Incorporar visualizações de mapa para analisar a distribuição geográfica dos clientes e identificar regiões com maior potencial de vendas.
+* **Integração com Firebase:** adicionar persistência dos dados e tornar o sistema mais escalável usando um banco de dados NoSQL real, como Firebase.
+* **Análise Preditiva:** implementar modelos de Machine Learning para prever o comportamento futuro dos clientes, como *churn*, valor de tempo de vida (*LTV*) ou recomendação de produtos.
+* **Análise Geoespacial:** incorporar visualizações de mapa para analisar a distribuição geográfica dos clientes e identificar regiões com maior potencial de vendas.
 
 ---
 # Contribuições
